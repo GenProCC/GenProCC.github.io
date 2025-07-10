@@ -1,1 +1,1 @@
-# genprocc.github.io
+# GenProCC Workshop
