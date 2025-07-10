@@ -75,7 +75,11 @@
 
     <script>
     // Placeholder deadlines
+    // change the AoE time to UTC time
+    // submission deadline: Aug 22, 2025 23:59 AoE
+    // notification deadline: Sep 22, 2025 23:59 AoE
     var submissionDeadline = new Date("Aug 23, 2025 11:59:00 UTC").getTime();
+    var notificationDeadline = new Date("Sep 23, 2025 11:59:00 UTC").getTime();
     var cameraReadyDeadline = new Date("YYYY-MM-DDTHH:MM:SSZ").getTime();
 
     function updateCountdown(deadline, elementId) {
@@ -104,6 +108,7 @@
 
     setInterval(function() {
         updateCountdown(submissionDeadline, "countdown_submission");
+        updateCountdown(notificationDeadline, "countdown_notification");
         updateCountdown(cameraReadyDeadline, "countdown_camera");
     }, 1000);
     </script>
@@ -194,7 +199,7 @@
                     </div>
                     <div class="date-info">
                         <h3>Paper Submission</h3>
-                        <p>August 22, 2025 23:59 AoE (Anywhere on Earth)</p>
+                        <p>August 22, 2025 23:59 AoE</p>
                         <div id="countdown_submission"></div>
                     </div>
                 </div>
@@ -204,7 +209,8 @@
                     </div>
                     <div class="date-info">
                         <h3>Decision Notification</h3>
-                        <p>September 22, 2025 AoE (Anywhere on Earth)</p>
+                        <p>September 22, 2025 AoE</p>
+                        <div id="countdown_notification"></div>
                     </div>
                 </div>
                 <div class="date-item">
